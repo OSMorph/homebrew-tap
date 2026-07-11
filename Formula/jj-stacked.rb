@@ -5,24 +5,24 @@
 class JjStacked < Formula
   desc "Stacked pull requests for Jujutsu users"
   homepage "https://github.com/OSMorph/jj-stacked"
-  version "2.4.3"
+  version "2.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/OSMorph/jj-stacked/releases/download/v2.4.3/jj-stacked_2.4.3_darwin_amd64.tar.gz"
-      sha256 "81a2d75c9bc246b774ca3add10bc977437db97dd3cee500f870d3b7fd891034c"
+      url "https://github.com/OSMorph/jj-stacked/releases/download/v2.5.0/jj-stacked_2.5.0_darwin_amd64.tar.gz"
+      sha256 "f1fa5802547c8273e7cc936330805ae4b4003b7878507be60bcb0350e8a59828"
 
-      def install
+      define_method(:install) do
         bin.install "jj-stacked"
         bin.install "jjk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/OSMorph/jj-stacked/releases/download/v2.4.3/jj-stacked_2.4.3_darwin_arm64.tar.gz"
-      sha256 "ecae39eea8602e487d4dd704142befb70256128663559f857be13c43e14cfc9e"
+      url "https://github.com/OSMorph/jj-stacked/releases/download/v2.5.0/jj-stacked_2.5.0_darwin_arm64.tar.gz"
+      sha256 "982088d6f57bb911ee532b30331dbc8388be000e1f23267305b3c0ce5b081548"
 
-      def install
+      define_method(:install) do
         bin.install "jj-stacked"
         bin.install "jjk"
       end
@@ -31,17 +31,17 @@ class JjStacked < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OSMorph/jj-stacked/releases/download/v2.4.3/jj-stacked_2.4.3_linux_amd64.tar.gz"
-      sha256 "b5857af76f7effeb9ca8c78175ba61a117b7befe75834abe8c1d1e1c97dc876e"
-      def install
+      url "https://github.com/OSMorph/jj-stacked/releases/download/v2.5.0/jj-stacked_2.5.0_linux_amd64.tar.gz"
+      sha256 "bd2946e7730f2bc73a4a923c8227906ef4ce65104d9455fe2f711cf74d59f8bc"
+      define_method(:install) do
         bin.install "jj-stacked"
         bin.install "jjk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OSMorph/jj-stacked/releases/download/v2.4.3/jj-stacked_2.4.3_linux_arm64.tar.gz"
-      sha256 "47f539a37b016ea2df9f4818ca890200f3087bca2da9a01e8b5a6fec149c7b3c"
-      def install
+      url "https://github.com/OSMorph/jj-stacked/releases/download/v2.5.0/jj-stacked_2.5.0_linux_arm64.tar.gz"
+      sha256 "653c13ba8a8bf13826846c4d1c8ef9e8135bceef7517cb125e90a36de4265324"
+      define_method(:install) do
         bin.install "jj-stacked"
         bin.install "jjk"
       end
